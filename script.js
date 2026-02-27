@@ -15,7 +15,7 @@ const quotes = [
 let lastQuoteIndex = -1; // Для избежания повторений подряд
 
 // Функция выбора случайной цитаты (не повторяется с предыдущей)
-function getRandomQuote() {
+const getRandomQuote = () => {
     let randomIndex;
     
     // Выбираем индекс, отличный от предыдущего
@@ -28,7 +28,7 @@ function getRandomQuote() {
 }
 
 // Функция обновления DOM
-function updateQuote() {
+const updateQuote = () => {
     const quote = getRandomQuote();
     document.getElementById('quoteText').textContent = quote.text;
     document.getElementById('quoteAuthor').textContent = '— ' + quote.author;
